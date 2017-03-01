@@ -1,0 +1,22 @@
+/*    Top bar   */
+.top-bar { position: relative; }
+.top-bar ul li { float: left; width: 20%;}
+.top-bar ul li > a:hover, .top-bar ul > li.active > a, .top-bar ul > li > a:focus { text-decoration: underline; }
+.top-bar ul li.has-dropdown { position: relative; /* Dropdown Level 2+ */ }
+.top-bar ul li.has-dropdown:hover > .dropdown, .top-bar ul > li.has-dropdown:focus > .dropdown { display: block;}
+.top-bar ul li.has-dropdown .dropdown {padding: 9px 0 0 0; display: none;}
+.top-bar ul li.has-dropdown .dropdown li {min-width: 100%; padding:0 0 5px;}
+.top-bar ul li.has-dropdown .dropdown li > a {white-space: nowrap; }
+.top-bar ul li.has-dropdown .dropdown li.has-dropdown > a { padding-right: 30px; }
+.top-bar ul li.has-dropdown .dropdown li.has-dropdown .dropdown { position: absolute; left: 100%; top: 0; }
+
+
+/* Top bar in vertical view type */
+
+
+.top-bar.vertical ul li {float:none;}
+.top-bar.vertical ul li.has-dropdown .dropdown {display:block;}
+
+/* Firefox Fixes */
+@-moz-document url-prefix() { .top-bar ul li .button.small { padding-bottom: 6px; }
+  .top-bar ul li.search form input[type=search] { font-size: 14px; height: 22px; padding: 3px; } }
